@@ -1,0 +1,64 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.test {
+  background-color: rgb(245, 229, 6);
+  width: 25%;
+  float: left;
+  padding: 4px;
+  text-align: center;
+  position: relative;
+  border: solid 1px black;
+  overflow: hidden;
+}
+.clr {
+  clear: both;
+}
+.test img {
+  width: 100%;
+  transition: transform 1s 1s;
+}
+.test:hover img {
+  transform: scale(1.2);
+}
+.layer {
+  text-align: center;
+  background-color: rgba(201, 37, 37, 0.7);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
+}
+.layer h4 {
+  position: relative;
+  top: 0%;
+  left: 100%;
+  background-color: rgba(201, 37, 37, 0.7);
+  padding: 20px;
+  font-size: 20px;
+  transition: left 1s 2s;
+}
+.layer p {
+  position: relative;
+  top: 0%;
+  left: 100%;
+  padding: 20px;
+  font-size: 18px;
+  transition: left 1s 2.5s;
+}
+.test:hover .layer {
+  opacity: 1;
+  left: 0;
+  transform: rotate(360deg);
+}
+.test:hover .layer h4 {
+  left: 0%;
+}
+.test:hover .layer p {
+  left: 0%;
+}
